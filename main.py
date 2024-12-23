@@ -47,7 +47,7 @@ def create_item(item: ToDoCreate, db: Session = Depends(get_db)):
     new_item = ToDoItemModel(
         title = item.title,
         description = item.description,
-        completed = item.completed       
+        completed = item.completed        
     )
     db.add(new_item)
     db.commit()
